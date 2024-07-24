@@ -2,7 +2,6 @@
 pragma solidity ^0.8.18;
 
 contract NotSoSimpleStorage {
-
     uint256 internal myFavoriteNumber = 47;
     string internal myFavoriteWord = "";
 
@@ -28,11 +27,11 @@ contract NotSoSimpleStorage {
         myFavoriteWord = _myFavoriteWord;
     }
 
-    function getFavoriteNumber() public view returns(uint256) {
+    function getFavoriteNumber() public view returns (uint256) {
         return myFavoriteNumber;
     }
 
-    function getFavoriteWord() public view returns(string memory) {
+    function getFavoriteWord() public view returns (string memory) {
         return myFavoriteWord;
     }
 
@@ -40,7 +39,5 @@ contract NotSoSimpleStorage {
         listOfPeople.push(Person({favoriteNumber: _favoriteNumber, name: _name, favoriteWord: _favoriteWord}));
         nameToFavoriteNumber[_name] = _favoriteNumber;
         nameToFavoriteWord[_name] = _favoriteWord;
-
     }
-
 }
